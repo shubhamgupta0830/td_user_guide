@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>tabsdatasdk.tabsdataframe package &#8212; Tabsdata v0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=07821faf" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=5ae79a96"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_ref/tabsdatasdk.tabsdataframe';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tabsdatasdk.utils package" href="tabsdatasdk.utils.html" />
+    <link rel="prev" title="tabsdatasdk.cli package" href="tabsdatasdk.cli.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+     
+  
+
+<a class="navbar-brand logo" href="https://www.tabsdata.com">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/tabsdata.png" class="logo__image only-light" alt="Tabsdata v0.0 documentation - Home"/>
+    <img src="../_static/tabsdata.png" class="logo__image only-dark pst-js-only" alt="Tabsdata v0.0 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../guide/01_overview.html">
+    Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="tabsdatasdk.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../guide/01_overview.html">
+    Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="tabsdatasdk.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tabsdatasdk.api.html">tabsdatasdk.api package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabsdatasdk.cli.html">tabsdatasdk.cli package</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">tabsdatasdk.tabsdataframe package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabsdatasdk.utils.html">tabsdatasdk.utils package</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="tabsdatasdk.html" class="nav-link">API Reference</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">tabsdatasdk.tabsdataframe package</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tabsdatasdk-tabsdataframe-package">
+<h1>tabsdatasdk.tabsdataframe package<a class="headerlink" href="#tabsdatasdk-tabsdataframe-package" title="Link to this heading">#</a></h1>
+<section id="module-tabsdatasdk.tabsdataframe.annotation">
+<span id="tabsdatasdk-tabsdataframe-annotation-module"></span><h2>tabsdatasdk.tabsdataframe.annotation module<a class="headerlink" href="#module-tabsdatasdk.tabsdataframe.annotation" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.tabsdataframe.annotation.</span></span><span class="sig-name descname"><span class="pre">Status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status.DELAYED">
+<span class="sig-name descname"><span class="pre">DELAYED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status.DELAYED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status.DOING">
+<span class="sig-name descname"><span class="pre">DOING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status.DOING" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status.DONE">
+<span class="sig-name descname"><span class="pre">DONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status.DONE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status.TESTED">
+<span class="sig-name descname"><span class="pre">TESTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status.TESTED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status.TESTING">
+<span class="sig-name descname"><span class="pre">TESTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status.TESTING" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.Status.TODO">
+<span class="sig-name descname"><span class="pre">TODO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.Status.TODO" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.annotation.status">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.tabsdataframe.annotation.</span></span><span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enum_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tabsdatasdk.tabsdataframe.annotation.Status" title="tabsdatasdk.tabsdataframe.annotation.Status"><span class="pre">Status</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.annotation.status" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-tabsdatasdk.tabsdataframe.constants">
+<span id="tabsdatasdk-tabsdataframe-constants-module"></span><h2>tabsdatasdk.tabsdataframe.constants module<a class="headerlink" href="#module-tabsdatasdk.tabsdataframe.constants" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.constants.SystemColumns">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.tabsdataframe.constants.</span></span><span class="sig-name descname"><span class="pre">SystemColumns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.constants.SystemColumns" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.constants.SystemColumns.TD_ID">
+<span class="sig-name descname"><span class="pre">TD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'$td.id'</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.constants.SystemColumns.TD_ID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.constants.SystemColumns.TD_SRC">
+<span class="sig-name descname"><span class="pre">TD_SRC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'$td.src'</span></em><a class="headerlink" href="#tabsdatasdk.tabsdataframe.constants.SystemColumns.TD_SRC" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="tabsdatasdk-tabsdataframe-frame-module">
+<h2>tabsdatasdk.tabsdataframe.frame module<a class="headerlink" href="#tabsdatasdk-tabsdataframe-frame-module" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-tabsdatasdk.tabsdataframe.group">
+<span id="tabsdatasdk-tabsdataframe-group-module"></span><h2>tabsdatasdk.tabsdataframe.group module<a class="headerlink" href="#module-tabsdatasdk.tabsdataframe.group" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.tabsdataframe.group.</span></span><span class="sig-name descname"><span class="pre">TabsDataLazyGroupBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">LazyGroupBy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.agg">
+<span class="sig-name descname"><span class="pre">agg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">aggs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">IntoExpr</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">IntoExpr</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">named_aggs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">IntoExpr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.agg" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.all">
+<span class="sig-name descname"><span class="pre">all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.all" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.count" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.first">
+<span class="sig-name descname"><span class="pre">first</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.first" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.head">
+<span class="sig-name descname"><span class="pre">head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.head" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.last">
+<span class="sig-name descname"><span class="pre">last</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.last" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.len">
+<span class="sig-name descname"><span class="pre">len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.len" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.max">
+<span class="sig-name descname"><span class="pre">max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.max" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.mean">
+<span class="sig-name descname"><span class="pre">mean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.mean" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.median">
+<span class="sig-name descname"><span class="pre">median</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.median" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.min">
+<span class="sig-name descname"><span class="pre">min</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.min" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.n_unique">
+<span class="sig-name descname"><span class="pre">n_unique</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.n_unique" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.quantile">
+<span class="sig-name descname"><span class="pre">quantile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RollingInterpolationMethod</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'nearest'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.quantile" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.sum">
+<span class="sig-name descname"><span class="pre">sum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.sum" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.tail">
+<span class="sig-name descname"><span class="pre">tail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tdf.TabsDataLazyFrame</span></span></span><a class="headerlink" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.tail" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="tabsdatasdk-tabsdataframe-reflection-module">
+<h2>tabsdatasdk.tabsdataframe.reflection module<a class="headerlink" href="#tabsdatasdk-tabsdataframe-reflection-module" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tabsdatasdk.cli.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">tabsdatasdk.cli package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tabsdatasdk.utils.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">tabsdatasdk.utils package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.tabsdataframe.annotation">tabsdatasdk.tabsdataframe.annotation module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status.DELAYED"><code class="docutils literal notranslate"><span class="pre">Status.DELAYED</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status.DOING"><code class="docutils literal notranslate"><span class="pre">Status.DOING</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status.DONE"><code class="docutils literal notranslate"><span class="pre">Status.DONE</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status.TESTED"><code class="docutils literal notranslate"><span class="pre">Status.TESTED</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status.TESTING"><code class="docutils literal notranslate"><span class="pre">Status.TESTING</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.Status.TODO"><code class="docutils literal notranslate"><span class="pre">Status.TODO</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.annotation.status"><code class="docutils literal notranslate"><span class="pre">status()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.tabsdataframe.constants">tabsdatasdk.tabsdataframe.constants module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.constants.SystemColumns"><code class="docutils literal notranslate"><span class="pre">SystemColumns</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.constants.SystemColumns.TD_ID"><code class="docutils literal notranslate"><span class="pre">SystemColumns.TD_ID</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.constants.SystemColumns.TD_SRC"><code class="docutils literal notranslate"><span class="pre">SystemColumns.TD_SRC</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk-tabsdataframe-frame-module">tabsdatasdk.tabsdataframe.frame module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.tabsdataframe.group">tabsdatasdk.tabsdataframe.group module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.agg"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.agg()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.all"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.all()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.count"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.count()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.first"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.first()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.head"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.head()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.last"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.last()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.len"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.len()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.max"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.max()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.mean"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.mean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.median"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.median()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.min"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.min()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.n_unique"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.n_unique()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.quantile"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.quantile()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.sum"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.sum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.tabsdataframe.group.TabsDataLazyGroupBy.tail"><code class="docutils literal notranslate"><span class="pre">TabsDataLazyGroupBy.tail()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk-tabsdataframe-reflection-module">tabsdatasdk.tabsdataframe.reflection module</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+<!-- Your custom footer content here -->
+
+  </body>
+</html>
