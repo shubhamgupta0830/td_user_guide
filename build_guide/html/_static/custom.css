@@ -1,0 +1,77 @@
+:root {
+    --sd-fontsize-tabs-label: 1rem;
+    --sd-fontsize-dropdown-title: 1rem;
+    --pst-font-size-base: 15px;
+    --pst-font-family-base: YourPreferredFont, var(--pst-font-family-base-system);
+  }
+  
+.sd-tab-set {
+    font-size: var(--pst-font-size-base);
+    font-family: var(--pst-font-family-base);
+  }
+
+.sd-tab-content {
+    border: none !important;
+  }
+  
+  
+
+/* Hide the hamburger menu button */
+.navbar-toggler {
+    display: none !important;
+}
+
+/* Hide the dark-light mode toggle button */
+.theme-switch-buttons {
+    display: none !important;
+}
+
+/* Hide the settings, download, and fullscreen icons */
+.navbar-icon-links {
+    display: none !important;
+}
+
+/* Optional: Hide other toolbar buttons (adjust if needed) */
+.navbar-right {
+    display: none !important;
+}
+
+
+/* Ensure vertical stacking of navbars */
+.navbar-container {
+    margin-bottom: 0; /* Remove unnecessary spacing between the two bars */
+    width: 100%; /* Ensure full width */
+}
+
+/* Add spacing between navbars, if desired */
+.navbar-general {
+    border-bottom: 1px solid #ddd; /* Optional: Add separator line */
+}
+
+.navbar-docs {
+    border-top: 1px solid #444; /* Optional: Add separator line */
+}
+
+/* Style the docs navigation */
+.docs-nav-container {
+    text-align: center; /* Center the navigation */
+    margin-bottom: 2rem; /* Add spacing below the navigation */
+}
+
+.docs-nav {
+    display: inline-flex;
+    gap: 2rem; /* Space between links */
+    justify-content: center;
+    align-items: center;
+}
+
+.docs-nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #0078d4; /* Use your site's color scheme */
+}
+
+.docs-nav-link:hover {
+    text-decoration: underline;
+}

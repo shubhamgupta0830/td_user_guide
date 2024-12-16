@@ -1,0 +1,1526 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>tabsdatasdk.api package &#8212; Test v0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=6885adaa"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/tabsdatasdk.api';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tabsdatasdk.cli package" href="tabsdatasdk.cli.html" />
+    <link rel="prev" title="tabsdatasdk package" href="tabsdatasdk.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Test v0.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">tabsdatasdk</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="tabsdatasdk.html">tabsdatasdk package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">tabsdatasdk.api package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tabsdatasdk.cli.html">tabsdatasdk.cli package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tabsdatasdk.tabsdataframe.html">tabsdatasdk.tabsdataframe package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tabsdatasdk.utils.html">tabsdatasdk.utils package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_autosummary/tabsdatasdk.api.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>tabsdatasdk.api package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.api.api_server">tabsdatasdk.api.api_server module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer"><code class="docutils literal notranslate"><span class="pre">APIServer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.authentication_access"><code class="docutils literal notranslate"><span class="pre">APIServer.authentication_access()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.authentication_header"><code class="docutils literal notranslate"><span class="pre">APIServer.authentication_header</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.authentication_refresh"><code class="docutils literal notranslate"><span class="pre">APIServer.authentication_refresh()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_create"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_delete"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_execute"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_execute()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_get"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_in_datastore_list"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_in_datastore_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_list_functions"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_list_functions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_show_current_function"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_show_current_function()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_update"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_upload_function_bundle"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_upload_function_bundle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_create"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_delete"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_get_by_name"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_get_by_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_list"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_update"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.delete"><code class="docutils literal notranslate"><span class="pre">APIServer.delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.execution_plan_list"><code class="docutils literal notranslate"><span class="pre">APIServer.execution_plan_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.get"><code class="docutils literal notranslate"><span class="pre">APIServer.get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.get_params_dict"><code class="docutils literal notranslate"><span class="pre">APIServer.get_params_dict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.post"><code class="docutils literal notranslate"><span class="pre">APIServer.post()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.post_binary"><code class="docutils literal notranslate"><span class="pre">APIServer.post_binary()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.raise_for_status"><code class="docutils literal notranslate"><span class="pre">APIServer.raise_for_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.raise_for_status_or_return"><code class="docutils literal notranslate"><span class="pre">APIServer.raise_for_status_or_return()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.status_get"><code class="docutils literal notranslate"><span class="pre">APIServer.status_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.table_get_by_id"><code class="docutils literal notranslate"><span class="pre">APIServer.table_get_by_id()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.table_list_all"><code class="docutils literal notranslate"><span class="pre">APIServer.table_list_all()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_create"><code class="docutils literal notranslate"><span class="pre">APIServer.users_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_delete"><code class="docutils literal notranslate"><span class="pre">APIServer.users_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_get_by_name"><code class="docutils literal notranslate"><span class="pre">APIServer.users_get_by_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_list"><code class="docutils literal notranslate"><span class="pre">APIServer.users_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_update"><code class="docutils literal notranslate"><span class="pre">APIServer.users_update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServerError"><code class="docutils literal notranslate"><span class="pre">APIServerError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.obtain_connection"><code class="docutils literal notranslate"><span class="pre">obtain_connection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.process_url"><code class="docutils literal notranslate"><span class="pre">process_url()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.api.tabsdata_server">tabsdatasdk.api.tabsdata_server module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Dataset.created_on_string"><code class="docutils literal notranslate"><span class="pre">Dataset.created_on_string</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Datastore"><code class="docutils literal notranslate"><span class="pre">Datastore</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Datastore.created_on_string"><code class="docutils literal notranslate"><span class="pre">Datastore.created_on_string</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.STATUS_MAPPING"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.STATUS_MAPPING</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.triggered_on_str"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.triggered_on_str</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.ended_on_str"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.ended_on_str</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.started_on_str"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.started_on_str</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.STATUS_MAPPING</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.status_to_mapping"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.status_to_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Function"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Function.created_on_string"><code class="docutils literal notranslate"><span class="pre">Function.created_on_string</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ServerStatus"><code class="docutils literal notranslate"><span class="pre">ServerStatus</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer"><code class="docutils literal notranslate"><span class="pre">TabsdataServer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_create"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_delete"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_get"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_list_functions"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_list_functions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_trigger"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_trigger()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_update"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_create"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_delete"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_get"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_list_dataset"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_list_dataset()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_update"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastores"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastores</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.execution_plans"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.execution_plans</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.status"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_create"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_delete"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_get"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_update"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.users"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.users</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.calculate_file_sha256"><code class="docutils literal notranslate"><span class="pre">calculate_file_sha256()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.convert_timestamp_to_string"><code class="docutils literal notranslate"><span class="pre">convert_timestamp_to_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.create_archive_and_hash"><code class="docutils literal notranslate"><span class="pre">create_archive_and_hash()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.dynamic_import_function_from_path"><code class="docutils literal notranslate"><span class="pre">dynamic_import_function_from_path()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tabsdatasdk-api-package">
+<h1>tabsdatasdk.api package<a class="headerlink" href="#tabsdatasdk-api-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-tabsdatasdk.api.api_server">
+<span id="tabsdatasdk-api-api-server-module"></span><h2>tabsdatasdk.api.api_server module<a class="headerlink" href="#module-tabsdatasdk.api.api_server" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.api_server.</span></span><span class="sig-name descname"><span class="pre">APIServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.authentication_access">
+<span class="sig-name descname"><span class="pre">authentication_access</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.authentication_access" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.authentication_header">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">authentication_header</span></span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.authentication_header" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.authentication_refresh">
+<span class="sig-name descname"><span class="pre">authentication_refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.authentication_refresh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_create">
+<span class="sig-name descname"><span class="pre">dataset_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bundle_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_snippet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_create" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_delete">
+<span class="sig-name descname"><span class="pre">dataset_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_delete" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_execute">
+<span class="sig-name descname"><span class="pre">dataset_execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_execute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_get">
+<span class="sig-name descname"><span class="pre">dataset_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_in_datastore_list">
+<span class="sig-name descname"><span class="pre">dataset_in_datastore_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_in_datastore_list" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_list_functions">
+<span class="sig-name descname"><span class="pre">dataset_list_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_list_functions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_show_current_function">
+<span class="sig-name descname"><span class="pre">dataset_show_current_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_show_current_function" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_update">
+<span class="sig-name descname"><span class="pre">dataset_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bundle_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_snippet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.dataset_upload_function_bundle">
+<span class="sig-name descname"><span class="pre">dataset_upload_function_bundle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bundle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.dataset_upload_function_bundle" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.datastore_create">
+<span class="sig-name descname"><span class="pre">datastore_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.datastore_create" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.datastore_delete">
+<span class="sig-name descname"><span class="pre">datastore_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.datastore_delete" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.datastore_get_by_name">
+<span class="sig-name descname"><span class="pre">datastore_get_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.datastore_get_by_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.datastore_list">
+<span class="sig-name descname"><span class="pre">datastore_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.datastore_list" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.datastore_update">
+<span class="sig-name descname"><span class="pre">datastore_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.datastore_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.delete" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.execution_plan_list">
+<span class="sig-name descname"><span class="pre">execution_plan_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.execution_plan_list" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.get_params_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_params_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.get_params_dict" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.post" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.post_binary">
+<span class="sig-name descname"><span class="pre">post_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.post_binary" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.raise_for_status">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raise_for_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.raise_for_status" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.raise_for_status_or_return">
+<span class="sig-name descname"><span class="pre">raise_for_status_or_return</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Response</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Response</span></span></span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.raise_for_status_or_return" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.status_get">
+<span class="sig-name descname"><span class="pre">status_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.status_get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.table_get_by_id">
+<span class="sig-name descname"><span class="pre">table_get_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.table_get_by_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.table_list_all">
+<span class="sig-name descname"><span class="pre">table_list_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.table_list_all" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.users_create">
+<span class="sig-name descname"><span class="pre">users_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.users_create" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.users_delete">
+<span class="sig-name descname"><span class="pre">users_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.users_delete" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.users_get_by_name">
+<span class="sig-name descname"><span class="pre">users_get_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.users_get_by_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.users_list">
+<span class="sig-name descname"><span class="pre">users_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.users_list" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServer.users_update">
+<span class="sig-name descname"><span class="pre">users_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_password_change</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_for_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServer.users_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.APIServerError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.api_server.</span></span><span class="sig-name descname"><span class="pre">APIServerError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.api_server.APIServerError" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.obtain_connection">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.api_server.</span></span><span class="sig-name descname"><span class="pre">obtain_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServer" title="tabsdatasdk.api.api_server.APIServer"><span class="pre">APIServer</span></a></span></span><a class="headerlink" href="#tabsdatasdk.api.api_server.obtain_connection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.api.api_server.process_url">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.api_server.</span></span><span class="sig-name descname"><span class="pre">process_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tabsdatasdk.api.api_server.process_url" title="Link to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>A helper function to process the url string. It adds the protocol and the</dt><dd><p>default port if missing</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tabsdatasdk.api.tabsdata_server">
+<span id="tabsdatasdk-api-tabsdata-server-module"></span><h2>tabsdatasdk.api.tabsdata_server module<a class="headerlink" href="#module-tabsdatasdk.api.tabsdata_server" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.Dataset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Function" title="tabsdatasdk.api.tabsdata_server.Function"><span class="pre">Function</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.Dataset" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a dataset in the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+<li><p><strong>datastore</strong> (<em>str</em>) – The datastore where the dataset is stored.</p></li>
+<li><p><strong>created_on</strong> (<em>int</em>) – The timestamp when the dataset was created.</p></li>
+<li><p><strong>created_by</strong> (<em>str</em>) – The user that created the dataset.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the dataset.</p></li>
+<li><p><strong>function</strong> (<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Function" title="tabsdatasdk.api.tabsdata_server.Function"><em>Function</em></a>) – The function of the dataset.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.Dataset.created_on_string">
+<span class="sig-name descname"><span class="pre">created_on_string</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.Dataset.created_on_string" title="Link to this definition">#</a></dt>
+<dd><p>The timestamp when the dataset was created as a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initialize the Dataset object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+<li><p><strong>datastore</strong> (<em>str</em>) – The datastore where the dataset is stored.</p></li>
+<li><p><strong>created_on</strong> (<em>int</em>) – The timestamp when the dataset was created.</p></li>
+<li><p><strong>created_by</strong> (<em>str</em>) – The user that created the dataset.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the dataset.</p></li>
+<li><p><strong>function</strong> (<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Function" title="tabsdatasdk.api.tabsdata_server.Function"><em>Function</em></a>) – The function of the dataset.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.Datastore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">Datastore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.Datastore" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a datastore in the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The id of the datastore.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the datastore.</p></li>
+<li><p><strong>created_on</strong> (<em>int</em>) – The timestamp when the datastore was created.</p></li>
+<li><p><strong>created_by</strong> (<em>str</em>) – The user that created the datastore.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.Datastore.created_on_string">
+<span class="sig-name descname"><span class="pre">created_on_string</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.Datastore.created_on_string" title="Link to this definition">#</a></dt>
+<dd><p>The timestamp when the datastore was created as a
+string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initialize the Datastore object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the datastore.</p></li>
+<li><p><strong>created_on</strong> (<em>int</em>) – The timestamp when the datastore was created.</p></li>
+<li><p><strong>created_by</strong> (<em>str</em>) – The user that created the datastore.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ExecutionPlan">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">ExecutionPlan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triggered_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triggered_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ended_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">started_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents an execution plan in the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore</strong> (<em>str</em>) – The datastore where the execution plan is running.</p></li>
+<li><p><strong>dataset</strong> (<em>str</em>) – The dataset where the execution plan is running.</p></li>
+<li><p><strong>triggered_by</strong> (<em>str</em>) – The user that triggered the execution plan.</p></li>
+<li><p><strong>triggered_on</strong> (<em>int</em>) – The timestamp when the execution plan was triggered.</p></li>
+<li><p><strong>ended_on</strong> (<em>int</em>) – The timestamp when the execution plan ended.</p></li>
+<li><p><strong>started_on</strong> (<em>int</em>) – The timestamp when the execution plan started.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the execution plan.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ExecutionPlan.STATUS_MAPPING">
+<span class="sig-name descname"><span class="pre">STATUS_MAPPING</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.STATUS_MAPPING" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary mapping the status of the execution plan to
+a human-readable string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ExecutionPlan.triggered_on_str">
+<span class="sig-name descname"><span class="pre">triggered_on_str</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.triggered_on_str" title="Link to this definition">#</a></dt>
+<dd><p>The timestamp when the execution plan was triggered as a
+string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ExecutionPlan.ended_on_str">
+<span class="sig-name descname"><span class="pre">ended_on_str</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.ended_on_str" title="Link to this definition">#</a></dt>
+<dd><p>The timestamp when the execution plan ended as a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ExecutionPlan.started_on_str">
+<span class="sig-name descname"><span class="pre">started_on_str</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.started_on_str" title="Link to this definition">#</a></dt>
+<dd><p>The timestamp when the execution plan started as a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">status_to_mapping(status</span></span></dt>
+<dd><p>str) -&gt; str: Convert the status of the execution plan
+to a human-readable string.</p>
+</dd></dl>
+
+<p>Initialize the ExecutionPlan object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore</strong> (<em>str</em>) – The datastore where the execution plan is running.</p></li>
+<li><p><strong>dataset</strong> (<em>str</em>) – The dataset where the execution plan is running.</p></li>
+<li><p><strong>triggered_by</strong> (<em>str</em>) – The user that triggered the execution plan.</p></li>
+<li><p><strong>triggered_on</strong> (<em>int</em>) – The timestamp when the execution plan was triggered.</p></li>
+<li><p><strong>ended_on</strong> (<em>int</em>) – The timestamp when the execution plan ended.</p></li>
+<li><p><strong>started_on</strong> (<em>int</em>) – The timestamp when the execution plan started.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the execution plan.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">STATUS_MAPPING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'C':</span> <span class="pre">'Cancelled',</span> <span class="pre">'D':</span> <span class="pre">'Done',</span> <span class="pre">'E':</span> <span class="pre">'Error',</span> <span class="pre">'F':</span> <span class="pre">'Failed',</span> <span class="pre">'R':</span> <span class="pre">'Running',</span> <span class="pre">'S':</span> <span class="pre">'Scheduled'}</span></em><a class="headerlink" href="#id0" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ExecutionPlan.status_to_mapping">
+<span class="sig-name descname"><span class="pre">status_to_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.status_to_mapping" title="Link to this definition">#</a></dt>
+<dd><p>Function to convert an execution_plan status to a mapping. While currently it
+only accesses the dictionary and returns the corresponding value, it could get
+more difficult in the future.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.Function">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">Function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trigger_with_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies_with_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.Function" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a function in the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trigger_with_names</strong> (<em>str</em><em> | </em><em>None</em>) – If not None, the URI of the trigger of the
+function.</p></li>
+<li><p><strong>tables</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The tables generated the function.</p></li>
+<li><p><strong>dependencies_with_names</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The dependencies of the function.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the function.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the function.</p></li>
+<li><p><strong>created_on</strong> (<em>int</em>) – The timestamp when the function was created.</p></li>
+<li><p><strong>created_by</strong> (<em>str</em>) – The user that created the function.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.Function.created_on_string">
+<span class="sig-name descname"><span class="pre">created_on_string</span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.Function.created_on_string" title="Link to this definition">#</a></dt>
+<dd><p>The timestamp when the function was created as a
+string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initialize the Function object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trigger_with_names</strong> (<em>str</em><em> | </em><em>None</em>) – If not None, the URI of the trigger of the
+function.</p></li>
+<li><p><strong>tables</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The tables generated the function.</p></li>
+<li><p><strong>dependencies_with_names</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The dependencies of the function.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the function.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the function.</p></li>
+<li><p><strong>created_on</strong> (<em>int</em>) – The timestamp when the function was created.</p></li>
+<li><p><strong>created_by</strong> (<em>str</em>) – The user that created the function.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.ServerStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">ServerStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latency_as_nanos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.ServerStatus" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents the status of the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>str</em>) – The status of the server.</p></li>
+<li><p><strong>latency_as_nanos</strong> (<em>int</em>) – The latency of the server in nanoseconds.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize the ServerStatus object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>str</em>) – The status of the server.</p></li>
+<li><p><strong>latency_as_nanos</strong> (<em>int</em>) – The latency of the server in nanoseconds.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">TabsdataServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – The url of the server.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – The username of the user.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – The password of the user.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize the TabsdataServer object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – The url of the server.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – The username of the user.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – The password of the user.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_create">
+<span class="sig-name descname"><span class="pre">dataset_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_bundle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requirements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_packages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_create" title="Link to this definition">#</a></dt>
+<dd><p>Create a dataset in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>function_path</strong> (<em>str</em>) – The path to the function. It should be in the form of
+/path/to/file.py::function_name.</p></li>
+<li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – The description of the dataset.</p></li>
+<li><p><strong>path_to_bundle</strong> (<em>str</em><em>, </em><em>optional</em>) – The path that has to be bundled and sent
+to the server. If None, the folder containing the function will be
+bundled.</p></li>
+<li><p><strong>requirements</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to a custom requirements.yaml file
+with the packages, python version and other information needed to
+create the Python environment for the function to run in the backend.
+If not provided, this information will be inferred from the current
+execution session.</p></li>
+<li><p><strong>local_packages</strong> (<em>List</em><em>[</em><em>str</em><em>] </em><em>| </em><em>str</em><em>, </em><em>optional</em>) – A list of paths to local
+Python packages that need to be included in the bundle. Each path
+must exist and be a valid Python package that can be installed by
+running <cite>pip install /path/to/package</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the dataset could not be created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_delete">
+<span class="sig-name descname"><span class="pre">dataset_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_delete" title="Link to this definition">#</a></dt>
+<dd><p>Delete a dataset in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the dataset could not be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_get">
+<span class="sig-name descname"><span class="pre">dataset_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Dataset" title="tabsdatasdk.api.tabsdata_server.Dataset"><span class="pre">Dataset</span></a></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_get" title="Link to this definition">#</a></dt>
+<dd><p>Get a dataset in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The dataset.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Dataset" title="tabsdatasdk.api.tabsdata_server.Dataset">Dataset</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the dataset could not be obtained.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_list_functions">
+<span class="sig-name descname"><span class="pre">dataset_list_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Function" title="tabsdatasdk.api.tabsdata_server.Function"><span class="pre">Function</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_list_functions" title="Link to this definition">#</a></dt>
+<dd><p>List the functions in a dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of functions in the dataset.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Function" title="tabsdatasdk.api.tabsdata_server.Function">Function</a>]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the functions could not be listed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_trigger">
+<span class="sig-name descname"><span class="pre">dataset_trigger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Response</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_trigger" title="Link to this definition">#</a></dt>
+<dd><p>Trigger a dataset in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response of the trigger request.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>requests.Response</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the dataset could not be triggered.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_update">
+<span class="sig-name descname"><span class="pre">dataset_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory_to_bundle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requirements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_packages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_update" title="Link to this definition">#</a></dt>
+<dd><p>Update a dataset in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset.</p></li>
+<li><p><strong>function_path</strong> (<em>str</em>) – The path to the function. It should be in the form of
+/path/to/file.py::function_name.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The new description of the dataset.</p></li>
+<li><p><strong>directory_to_bundle</strong> (<em>str</em><em>, </em><em>optional</em>) – The path that has to be bundled and
+sent to the server. If None, the folder containing the function will be
+bundled.</p></li>
+<li><p><strong>requirements</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to a custom requirements.yaml file
+with the packages, python version and other information needed to
+create the Python environment for the function to run in the backend.
+If not provided, this information will be inferred from the current
+execution session.</p></li>
+<li><p><strong>local_packages</strong> (<em>List</em><em>[</em><em>str</em><em>] </em><em>| </em><em>str</em><em>, </em><em>optional</em>) – A list of paths to local
+Python packages that need to be included in the bundle. Each path
+must exist and be a valid Python package that can be installed by
+running <cite>pip install /path/to/package</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the dataset could not be updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_create">
+<span class="sig-name descname"><span class="pre">datastore_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_create" title="Link to this definition">#</a></dt>
+<dd><p>Create a datastore in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – The description of the datastore.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the datastore could not be created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_delete">
+<span class="sig-name descname"><span class="pre">datastore_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_delete" title="Link to this definition">#</a></dt>
+<dd><p>Delete a datastore in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the datastore.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the datastore could not be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_get">
+<span class="sig-name descname"><span class="pre">datastore_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Datastore" title="tabsdatasdk.api.tabsdata_server.Datastore"><span class="pre">Datastore</span></a></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_get" title="Link to this definition">#</a></dt>
+<dd><p>Get a datastore in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the datastore.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The datastore.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Datastore" title="tabsdatasdk.api.tabsdata_server.Datastore">Datastore</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the datastore could not be obtained.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_list_dataset">
+<span class="sig-name descname"><span class="pre">datastore_list_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Dataset" title="tabsdatasdk.api.tabsdata_server.Dataset"><span class="pre">Dataset</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_list_dataset" title="Link to this definition">#</a></dt>
+<dd><p>List the datasets in a datastore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datastore_name</strong> (<em>str</em>) – The name of the datastore.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of datasets in the datastore.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Dataset" title="tabsdatasdk.api.tabsdata_server.Dataset">Dataset</a>]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the datasets could not be listed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_update">
+<span class="sig-name descname"><span class="pre">datastore_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_update" title="Link to this definition">#</a></dt>
+<dd><p>Update a datastore in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the datastore.</p></li>
+<li><p><strong>new_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The new name of the datastore.</p></li>
+<li><p><strong>new_description</strong> (<em>str</em><em>, </em><em>optional</em>) – The new description of the datastore.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the datastore could not be updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.datastores">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">datastores</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Datastore" title="tabsdatasdk.api.tabsdata_server.Datastore"><span class="pre">Datastore</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastores" title="Link to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Get the list of datastores in the server. This list is obtained every time the</dt><dd><p>property is accessed, so sequential accesses to this property in the same
+object might yield different results.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of datastores in the server.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.Datastore" title="tabsdatasdk.api.tabsdata_server.Datastore">Datastore</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.execution_plans">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execution_plans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan" title="tabsdatasdk.api.tabsdata_server.ExecutionPlan"><span class="pre">ExecutionPlan</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.execution_plans" title="Link to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Get the list of execution plans in the server. This list is obtained every time</dt><dd><p>the property is accessed, so sequential accesses to this property in the
+same object might yield different results.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of execution plans in the server.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan" title="tabsdatasdk.api.tabsdata_server.ExecutionPlan">ExecutionPlan</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.status">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.ServerStatus" title="tabsdatasdk.api.tabsdata_server.ServerStatus"><span class="pre">ServerStatus</span></a></em><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.status" title="Link to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Get the status of the server. This status is obtained every time the property is</dt><dd><p>accessed, so sequential accesses to this property in the same object might
+yield different results.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The status of the server.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.ServerStatus" title="tabsdatasdk.api.tabsdata_server.ServerStatus">ServerStatus</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.user_create">
+<span class="sig-name descname"><span class="pre">user_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_create" title="Link to this definition">#</a></dt>
+<dd><p>Create a user in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the user.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – The password of the user.</p></li>
+<li><p><strong>full_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The full name of the user.</p></li>
+<li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – The email of the user.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the user is enabled or not.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the user could not be created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.user_delete">
+<span class="sig-name descname"><span class="pre">user_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_delete" title="Link to this definition">#</a></dt>
+<dd><p>Delete a user in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the user.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the user could not be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.user_get">
+<span class="sig-name descname"><span class="pre">user_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.User" title="tabsdatasdk.api.tabsdata_server.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_get" title="Link to this definition">#</a></dt>
+<dd><p>Get a user in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the user.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The user.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.User" title="tabsdatasdk.api.tabsdata_server.User">User</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the user could not be obtained.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.user_update">
+<span class="sig-name descname"><span class="pre">user_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_update" title="Link to this definition">#</a></dt>
+<dd><p>Update a user in the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the user.</p></li>
+<li><p><strong>full_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The full name of the user.</p></li>
+<li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – The email of the user.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the user is enabled or not.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tabsdatasdk.api.api_server.APIServerError" title="tabsdatasdk.api.api_server.APIServerError"><strong>APIServerError</strong></a> – If the user could not be updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.TabsdataServer.users">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.User" title="tabsdatasdk.api.tabsdata_server.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.users" title="Link to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Get the list of users in the server. This list is obtained every time the</dt><dd><p>property is accessed, so sequential accesses to this property in the same
+object might yield different results.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of users in the server.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#tabsdatasdk.api.tabsdata_server.User" title="tabsdatasdk.api.tabsdata_server.User">User</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.User" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a user in the TabsdataServer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the user.</p></li>
+<li><p><strong>full_name</strong> (<em>str</em>) – The full name of the user.</p></li>
+<li><p><strong>email</strong> (<em>str</em>) – The email of the user.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – Whether the user is enabled or not.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize the User object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the user.</p></li>
+<li><p><strong>full_name</strong> (<em>str</em>) – The full name of the user.</p></li>
+<li><p><strong>email</strong> (<em>str</em>) – The email of the user.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – Whether the user is enabled or not.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.calculate_file_sha256">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">calculate_file_sha256</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.calculate_file_sha256" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.convert_timestamp_to_string">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">convert_timestamp_to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.convert_timestamp_to_string" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.create_archive_and_hash">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">create_archive_and_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporary_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_bundle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requirements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_packages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.create_archive_and_hash" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tabsdatasdk.api.tabsdata_server.dynamic_import_function_from_path">
+<span class="sig-prename descclassname"><span class="pre">tabsdatasdk.api.tabsdata_server.</span></span><span class="sig-name descname"><span class="pre">dynamic_import_function_from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="tabsdatasdk.html#tabsdatasdk.datasetfunction.DatasetFunction" title="tabsdatasdk.datasetfunction.DatasetFunction"><span class="pre">DatasetFunction</span></a></span></span><a class="headerlink" href="#tabsdatasdk.api.tabsdata_server.dynamic_import_function_from_path" title="Link to this definition">#</a></dt>
+<dd><p>Dynamically import a function from a path in the form of ‘path::function_name’.
+:param path:
+:return:</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tabsdatasdk.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">tabsdatasdk package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tabsdatasdk.cli.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">tabsdatasdk.cli package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.api.api_server">tabsdatasdk.api.api_server module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer"><code class="docutils literal notranslate"><span class="pre">APIServer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.authentication_access"><code class="docutils literal notranslate"><span class="pre">APIServer.authentication_access()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.authentication_header"><code class="docutils literal notranslate"><span class="pre">APIServer.authentication_header</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.authentication_refresh"><code class="docutils literal notranslate"><span class="pre">APIServer.authentication_refresh()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_create"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_delete"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_execute"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_execute()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_get"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_in_datastore_list"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_in_datastore_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_list_functions"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_list_functions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_show_current_function"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_show_current_function()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_update"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.dataset_upload_function_bundle"><code class="docutils literal notranslate"><span class="pre">APIServer.dataset_upload_function_bundle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_create"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_delete"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_get_by_name"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_get_by_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_list"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.datastore_update"><code class="docutils literal notranslate"><span class="pre">APIServer.datastore_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.delete"><code class="docutils literal notranslate"><span class="pre">APIServer.delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.execution_plan_list"><code class="docutils literal notranslate"><span class="pre">APIServer.execution_plan_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.get"><code class="docutils literal notranslate"><span class="pre">APIServer.get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.get_params_dict"><code class="docutils literal notranslate"><span class="pre">APIServer.get_params_dict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.post"><code class="docutils literal notranslate"><span class="pre">APIServer.post()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.post_binary"><code class="docutils literal notranslate"><span class="pre">APIServer.post_binary()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.raise_for_status"><code class="docutils literal notranslate"><span class="pre">APIServer.raise_for_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.raise_for_status_or_return"><code class="docutils literal notranslate"><span class="pre">APIServer.raise_for_status_or_return()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.status_get"><code class="docutils literal notranslate"><span class="pre">APIServer.status_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.table_get_by_id"><code class="docutils literal notranslate"><span class="pre">APIServer.table_get_by_id()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.table_list_all"><code class="docutils literal notranslate"><span class="pre">APIServer.table_list_all()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_create"><code class="docutils literal notranslate"><span class="pre">APIServer.users_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_delete"><code class="docutils literal notranslate"><span class="pre">APIServer.users_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_get_by_name"><code class="docutils literal notranslate"><span class="pre">APIServer.users_get_by_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_list"><code class="docutils literal notranslate"><span class="pre">APIServer.users_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServer.users_update"><code class="docutils literal notranslate"><span class="pre">APIServer.users_update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.APIServerError"><code class="docutils literal notranslate"><span class="pre">APIServerError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.obtain_connection"><code class="docutils literal notranslate"><span class="pre">obtain_connection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.api_server.process_url"><code class="docutils literal notranslate"><span class="pre">process_url()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tabsdatasdk.api.tabsdata_server">tabsdatasdk.api.tabsdata_server module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Dataset.created_on_string"><code class="docutils literal notranslate"><span class="pre">Dataset.created_on_string</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Datastore"><code class="docutils literal notranslate"><span class="pre">Datastore</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Datastore.created_on_string"><code class="docutils literal notranslate"><span class="pre">Datastore.created_on_string</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.STATUS_MAPPING"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.STATUS_MAPPING</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.triggered_on_str"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.triggered_on_str</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.ended_on_str"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.ended_on_str</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.started_on_str"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.started_on_str</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.STATUS_MAPPING</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ExecutionPlan.status_to_mapping"><code class="docutils literal notranslate"><span class="pre">ExecutionPlan.status_to_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Function"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.Function.created_on_string"><code class="docutils literal notranslate"><span class="pre">Function.created_on_string</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.ServerStatus"><code class="docutils literal notranslate"><span class="pre">ServerStatus</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer"><code class="docutils literal notranslate"><span class="pre">TabsdataServer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_create"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_delete"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_get"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_list_functions"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_list_functions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_trigger"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_trigger()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.dataset_update"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.dataset_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_create"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_delete"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_get"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_list_dataset"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_list_dataset()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastore_update"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastore_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.datastores"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.datastores</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.execution_plans"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.execution_plans</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.status"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_create"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_create()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_delete"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_get"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_get()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.user_update"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.user_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.TabsdataServer.users"><code class="docutils literal notranslate"><span class="pre">TabsdataServer.users</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.calculate_file_sha256"><code class="docutils literal notranslate"><span class="pre">calculate_file_sha256()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.convert_timestamp_to_string"><code class="docutils literal notranslate"><span class="pre">convert_timestamp_to_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.create_archive_and_hash"><code class="docutils literal notranslate"><span class="pre">create_archive_and_hash()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabsdatasdk.api.tabsdata_server.dynamic_import_function_from_path"><code class="docutils literal notranslate"><span class="pre">dynamic_import_function_from_path()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shubham
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Shubham.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
