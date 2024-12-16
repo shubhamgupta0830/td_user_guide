@@ -1,0 +1,32 @@
+Types of datasets
+-------------------
+
+Depending upon the purpose, a dataset may be referred to as an import dataset, a regular dataset/dataset, or an export dataset.
+
+Import dataset
+~~~~~~~~~~~~~~~
+
+An import dataset is a special dataset where the inputs to the tabfunction are sources external to Tabsdata system such as files and database tables. The output data of this kind of dataset is made available as tables that can be used by other datasets.
+
+Regular dataset
+~~~~~~~~~~~~~~~
+
+A regular dataset, also called just a dataset, is a dataset where the inputs to the tabfunction are tables available internally within Tabsdata system, and the output tables from this dataset can be used by other datasets. For example, a regular dataset can take two tables from two different datasets as inputs, manipulate the data and produce another table for consumption by downstream datasets.
+
+Export dataset
+~~~~~~~~~~~~~~~
+
+An export dataset is a dataset where the inputs to the tabfunction are tables for other datasets, and the output tables are sent to external data stores such as file systems and databases. For example, it could take the data from an internal table and write it to a database.
+
+
+Dataset Execution
+------------------
+When a dataset is triggered, either manually or because of a dependency trigger, it needs to be determined if the dataset function can be scheduled for execution or if it has to wait until there is a pristine view for its dependencies.
+
+For example, in the case of :ref:`Figure 1 <graph_image>` 
+    * When datasets A and B are triggered, as they do not have any dependency, they are scheduled for execution.
+    * When dataset C is triggered, as it depends only on dataset A, it can be scheduled for execution.
+    * When dataset D is triggered, as it depends on datasets B (which is not dependent on anything) and C (which has singular dependency on A), it can be scheduled for execution.
+    * When dataset E is triggered, because it depends on dataset C and dataset D and both of them depend on dataset A (directly or indirectly),  dataset E cannot be scheduled for execution until dataset C and dataset D are based on the same version of dataset A.
+    * For datasets A, B, C & D, as they have a single direct dependency, the execution is scheduled based on the latest dependency version
+    * For dataset E, as it has multiple dependencies, C & D, when the execution can be scheduled, depends if the trigger is a manual trigger or a dependency trigger. If it is a manual trigger, execution of dataset E can be scheduled when datasets C and D derive from the same version dataset A. If it is a dependency trigger, then execution can be scheduled when the non dependency trigger dataset has a version based on the dataset A version of the dependency trigger dataset.

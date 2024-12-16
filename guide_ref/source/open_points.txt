@@ -1,0 +1,42 @@
+..
+    Copyright 2024 Tabs Data Inc.
+
+Open Points RST
+==================================
+
+This is for comments and conversations on unresolved descriptions or questions. This won't be linked for the users to consume and is part of gitignore.
+
+dataset.RST
+-------------
+
+Under dataset:
+
+"and a configuration identifying the inputs of the dataset." 
+Is this correct? Initially it was inputs and outputs.
+
+
+Under dataset function:
+
+"produces as output a set of tables (that will be part of a single dataset)."
+Is this correct? Should be. But double checking.
+
+There are two intuitive optimizations that are exposed and built into the dataset function API for developers to use and also makes things simpler for them in a variety of use cases.
+
+Untouched tables: A dataset defines a fixed list of tables and those tables will be available throughout dataset commits. If a dataset execution does not write to one of its output tables, the contents of the table from the previous dataset commit remain.
+
+Table partition CRUD: If a table defines a partition key, the table can be modified at table partition level, fully replacing the table partition. Data from untouched partition tables remains unchanged.
+
+
+Alternative defintion for trigger:
+
+When defining a dataset it has to be specified what is going to make the dataset function to execute, to produce a new version of data for the dataset. This is referred to as the trigger of the dataset function or dataset.
+
+(IMPORTANT) Dataset execution:
+
+What does this mean?
+"If it is a dependency trigger, then execution can be scheduled when the non dependency trigger dataset has a version based on the dataset A version of the dependency trigger dataset.""
+
+Is this correct?
+"- When dataset D is triggered, as it depends on datasets B (which is not dependent on anything) and C (which has singular dependency on A), it can be scheduled for execution."
+
+

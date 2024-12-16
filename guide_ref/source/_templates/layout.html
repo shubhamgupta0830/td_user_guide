@@ -1,0 +1,12 @@
+{% extends "pydata_sphinx_theme/layout.html" %}
+
+{% block header %}
+<div class="docs-nav-container">
+    <nav class="docs-nav">
+        <a href="/docs/" class="docs-nav-link">Documentation</a>
+        <a href="/docs/api-reference/" class="docs-nav-link">API Reference</a>
+        <a href="/docs/faq/" class="docs-nav-link">Frequently Asked Questions</a>
+    </nav>
+</div>
+{{ super() }}
+{% endblock %}
