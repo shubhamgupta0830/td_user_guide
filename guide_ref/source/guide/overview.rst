@@ -5,7 +5,7 @@
 Overview
 ==============================================================
 
-Tabsdata is data integration platform that enables pub-sub for tables.
+Tabsdata is a data integration platform that enables pub-sub for tables.
 
 Tabsdata allows data producers to publish their datasets, and data
 consumers to discover these datasets and externalize them to their systems
