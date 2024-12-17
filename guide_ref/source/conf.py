@@ -61,7 +61,7 @@ html_theme_options = {
         "image_light": "_static/tabsdata.png",  # Logo for light theme
         "image_dark": "_static/tabsdata.png",   # Logo for dark theme (optional)
         # "text": "Tabsdata",  # Optional: Text next to the logo
-        "link": "https://www.tabsdata.com",
+        "link": "https://td-draft.webflow.io/",
     },
     # "navbar_center": ["custom_navbar.html"],  # Use external links in the center
     # "navbar_end": ["custom_navbar.html","custom_docs_nav.html"],  # Optional: Add social media icons on the right
