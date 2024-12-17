@@ -11,7 +11,7 @@ Welcome to Tabsdata User Guide! Sections below will guide you to make the most o
    :maxdepth: 2
    :caption: Contents:
 
-   01_overview_copy
+   overview
    02_getting_started/main
    03_key_concepts/main
    04_core_func/main

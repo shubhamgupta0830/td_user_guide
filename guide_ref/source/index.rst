@@ -10,6 +10,6 @@ Welcome to Tabsdata!
    :maxdepth: 4
    :caption: Contents:
 
-   Guide <guide/01_overview>
+   Guide <guide/intro>
    api_ref/tabsdatasdk
 
